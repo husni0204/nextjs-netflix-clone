@@ -4,11 +4,59 @@ import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
-import { Button, TextField } from '@mui/material'
+import { AppBar, Button, MenuItem, Select, TextField, Toolbar } from '@mui/material'
+import { grey } from '@mui/material/colors'
 
 const Header = () => {
   return (
-    <Box>
+    <Box sx={{borderBottom: `8px solid ${grey[900]}`}}>
+      <AppBar
+        sx={{
+          backgroundColor: 'transparent',
+          padding: '25px 20px'
+        }}
+        elevation={0}
+      >
+        <Toolbar>
+          <Grid container alignItems="center" spacing={2}>
+            <Grid item xs>
+              <Image
+                src="/__images/netflix.svg"
+                height="45px"
+                width="167px"
+                layout="intrinsic"
+                alt="Netflix logo"
+              />
+            </Grid>
+            <Grid item xs={'auto'}>
+              <Select
+                name="lang"
+                variant="outlined"
+                size="small"
+                defaultValue={'ID'}
+                sx={{
+                  borderWidth: '2px',
+                  borderStyle: 'solid',
+                  borderColor: 'common.white',
+                  color: 'common.white',
+                  '& .MuiSelect-icon': {
+                    color: 'common.white'
+                  },
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    border: 'none'
+                  }
+                }}
+              >
+                <MenuItem value={'ID'}>Bahasa Indonesia</MenuItem>
+                <MenuItem value={'EN'}>English</MenuItem>
+              </Select>
+            </Grid>
+            <Grid item xs={'auto'}>
+              <Button variant="contained" color="primary">Sign In</Button>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </AppBar>
       <Box
         sx={{
           position: 'relative',
@@ -34,6 +82,7 @@ const Header = () => {
         }}
       >
         <Image
+          priority={true}
           src={"/__images/backdrop.jpg"}
           layout="fill"
           objectFit="cover"
