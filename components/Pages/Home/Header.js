@@ -5,15 +5,16 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import { AppBar, Button, MenuItem, Select, TextField, Toolbar } from '@mui/material'
-import { grey } from '@mui/material/colors'
+import BorderedBottomBox from '../../Wrapper/BorderedBottomBox'
 
 const Header = () => {
   return (
-    <Box sx={{borderBottom: `8px solid ${grey[900]}`}}>
+    <BorderedBottomBox>
       <AppBar
         sx={{
           backgroundColor: 'transparent',
-          padding: '25px 20px'
+          padding: '25px 20px',
+          position: 'absolute'
         }}
         elevation={0}
       >
@@ -127,7 +128,7 @@ const Header = () => {
           </Grid>
         </Container>
       </Box>
-    </Box>
+    </BorderedBottomBox>
   )
 }
 
