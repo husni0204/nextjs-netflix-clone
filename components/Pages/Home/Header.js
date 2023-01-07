@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid'
 import { AppBar, Button, MenuItem, Select, TextField, Toolbar } from '@mui/material'
 import BorderedBottomBox from '../../Wrapper/BorderedBottomBox'
 
-const Header = () => {
+const Header = ({OpenModal}) => {
   return (
     <BorderedBottomBox>
       <AppBar
@@ -53,7 +53,7 @@ const Header = () => {
               </Select>
             </Grid>
             <Grid item xs={'auto'}>
-              <Button variant="contained" color="primary">Sign In</Button>
+              <Button variant="contained" color="primary" onClick={OpenModal}>Sign In</Button>
             </Grid>
           </Grid>
         </Toolbar>

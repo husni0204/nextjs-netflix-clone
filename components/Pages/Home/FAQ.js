@@ -1,7 +1,7 @@
 import React from 'react'
 import BorderedBottomBox from '../../Wrapper/BorderedBottomBox'
 import { Accordion, AccordionDetails, AccordionSummary, Button, Container, Grid, Stack, TextField, Typography, styled } from '@mui/material'
-import { ExpandMore } from '@mui/icons-material'
+import { Add, ExpandMore } from '@mui/icons-material'
 import { useState } from 'react'
 
 const CustomAccordion = styled(Accordion)(({ theme }) => ({
@@ -40,7 +40,7 @@ const FAQ = () => {
                 <Stack spacing={1} mb={8}>
                     <CustomAccordion square expanded={activeItem === 'panel1'} onChange={handleChange('panel1')}>
                         <CustomAccordionSummary
-                            expandIcon={<ExpandMore />}
+                            expandIcon={<Add sx={{color: 'common.white', fontSize: 48}} />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
@@ -57,7 +57,7 @@ const FAQ = () => {
                     </CustomAccordion>
                     <CustomAccordion square expanded={activeItem === 'panel2'} onChange={handleChange('panel2')}>
                         <CustomAccordionSummary
-                            expandIcon={<ExpandMore />}
+                            expandIcon={<Add sx={{color: 'common.white', fontSize: 48}} />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
@@ -71,7 +71,7 @@ const FAQ = () => {
                     </CustomAccordion>
                     <CustomAccordion square expanded={activeItem === 'panel3'} onChange={handleChange('panel3')}>
                         <CustomAccordionSummary
-                            expandIcon={<ExpandMore />}
+                            expandIcon={<Add sx={{color: 'common.white', fontSize: 48}} />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
@@ -88,7 +88,7 @@ const FAQ = () => {
                     </CustomAccordion>
                     <CustomAccordion square expanded={activeItem === 'panel4'} onChange={handleChange('panel4')}>
                         <CustomAccordionSummary
-                            expandIcon={<ExpandMore />}
+                            expandIcon={<Add sx={{color: 'common.white', fontSize: 48}} />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
@@ -102,7 +102,7 @@ const FAQ = () => {
                     </CustomAccordion>
                     <CustomAccordion square expanded={activeItem === 'panel5'} onChange={handleChange('panel5')}>
                         <CustomAccordionSummary
-                            expandIcon={<ExpandMore />}
+                            expandIcon={<Add sx={{color: 'common.white', fontSize: 48}} />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
@@ -116,7 +116,7 @@ const FAQ = () => {
                     </CustomAccordion>
                     <CustomAccordion square expanded={activeItem === 'panel6'} onChange={handleChange('panel6')}>
                         <CustomAccordionSummary
-                            expandIcon={<ExpandMore />}
+                            expandIcon={<Add sx={{color: 'common.white', fontSize: 48}} />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
